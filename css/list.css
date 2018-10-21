@@ -1,0 +1,118 @@
+.list-container{
+	min-height:calc(100vh - 90px);
+	background: #AA076B;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #61045F, #AA076B);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color:white;
+	padding-left: 7%;
+    padding-right: 7%;
+    width: 86%;
+	padding-bottom:30px;
+}
+
+.arrows-list{
+	display:flex;
+	padding-top:20px;
+	justify-content:center;
+	width:100%;
+}
+
+.arrows-list a{
+	display:block;
+	margin-right:20px;
+	background-color:white;
+	padding:5px;
+	border-radius:5px;
+	color:black;
+	text-decoration:none;
+	padding-left:20px;
+	padding-right:20px;
+	font-size:30px;
+}
+
+.list-container table{
+	margin-top:30px;
+	border-collapse:collapse;
+	width:100%;
+	-webkit-box-shadow: 0px 0px 41px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 41px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 41px -12px rgba(0,0,0,0.75);
+    
+}
+
+th:first-child{
+	border-top-left-radius:5px;
+}
+
+th:last-child{
+	border-top-right-radius:5px;
+}
+
+table tr:last-child td:first-child{
+	border-bottom-left-radius:5px;
+}
+
+table tr:last-child td:last-child{
+	border-bottom-right-radius:5px;
+}
+
+
+th{
+	background-color:#333;
+	padding:10px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+
+
+td{
+	padding:10px;
+	background-color:white;
+	border-bottom:1px solid #ccc;
+	color:#777;
+	font-weight:300;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+td a{
+	color:#777;
+	text-decoration:none;
+	font-weight:300;
+}
+
+table tr:last-child td{
+	border-bottom:0;
+}
+
+table tr:nth-child(2) td{
+	color:#e5c100;
+	font-weight:600;
+}
+
+table tr:nth-child(2) td a{
+	color:#e5c100;
+	font-weight:600;
+}
+
+table tr:nth-child(3) td{
+	color:#9a9a9a;
+	font-weight:600;
+}
+
+table tr:nth-child(3) td a{
+	color:#9a9a9a;
+	font-weight:600;
+}
+
+table tr:nth-child(4) td{
+	color:#905923;
+	font-weight:600;
+}
+
+table tr:nth-child(4) td a{
+	color:#905923;
+	font-weight:600;
+}
+
