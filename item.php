@@ -55,7 +55,7 @@ if(isset($_GET['del_com'])){
 			
 			<?php
 			
-				$adres =  urlencode($result->ulica.' '.$result->numer_lokalu);
+				$adres =  urlencode($result->miasto.' '.$result->ulica.' '.$result->numer_lokalu);
 				$map = str_replace("+", "%20", $adres);
 				
 				
