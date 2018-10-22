@@ -21,6 +21,8 @@ function myFunction() {
 		$(".img2").css("display", "block"); 
 		$(".img2").addClass("animated fadeIn"); 
 		
+		$(".index-main-bg").css("background-image", "url('img/slide2.jpg')"); 
+		
 	
 		return true;
 	}
@@ -33,7 +35,7 @@ function myFunction() {
 		
 		$(".img1").css("display", "block"); 
 		$(".img1").addClass("animated fadeIn"); 
-		
+		$(".index-main-bg").css("background-image", "url('img/slide1.jpg')"); 
 	
 		return false;
 	}

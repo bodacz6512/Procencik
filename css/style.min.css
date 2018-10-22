@@ -287,9 +287,24 @@
     padding: 0%;
     padding-left: 0;
     align-items: center;
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction:column;
+    flex-wrap: inherit;
 	margin-bottom:30px;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:0px;
+}
+
+.search-item:nth-child(2n+1) {
+    width: calc(100%);
+    margin-left: 0;
+}
+
+.search-item .search-item-desc {
+	padding-left:0;
+    width: 90%;
+	margin:0 auto;
+	margin-top:10px;
 }
 
 .index-third-text h2{
@@ -357,6 +372,18 @@
 
 .content-search {
     width: 100%;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.search-item img{
+	width:100%;
+}
+
+.search-item .search-item-img{
+	max-width:90%;
+	width:auto;
+	text-align:center;
 }
 
 

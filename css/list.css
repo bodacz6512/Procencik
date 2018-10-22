@@ -82,36 +82,36 @@ td a{
 	font-weight:300;
 }
 
-table tr:last-child td{
+.table-1 tr:last-child td{
 	border-bottom:0;
 }
 
-table tr:nth-child(2) td{
+.table-1 tr:nth-child(2) td{
 	color:#e5c100;
 	font-weight:600;
 }
 
-table tr:nth-child(2) td a{
+.table-1 tr:nth-child(2) td a{
 	color:#e5c100;
 	font-weight:600;
 }
 
-table tr:nth-child(3) td{
+.table-1 tr:nth-child(3) td{
 	color:#9a9a9a;
 	font-weight:600;
 }
 
-table tr:nth-child(3) td a{
+.table-1 tr:nth-child(3) td a{
 	color:#9a9a9a;
 	font-weight:600;
 }
 
-table tr:nth-child(4) td{
+.table-1 tr:nth-child(4) td{
 	color:#905923;
 	font-weight:600;
 }
 
-table tr:nth-child(4) td a{
+.table-1 tr:nth-child(4) td a{
 	color:#905923;
 	font-weight:600;
 }

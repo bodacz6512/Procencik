@@ -3,7 +3,6 @@
 require("connect.php");
 
 function count_category($id, $miejscowosc, $nazwa){
-
 	
 	if($id == 1){
 
@@ -158,7 +157,7 @@ if(isset($_GET['get_category_one'])){
 	$city = $_GET['city'];
 	$nazwa = $_GET['nazwa'];
 	
-	?><li<?php if(isset($_GET['category'])) {  if($cat_id == $_GET['category']) {   echo 'class="active"';    }  } ?>><a href="search.php?category=1<?php if(isset($_GET['nazwa'])) echo '&nazwa='.$_GET['nazwa']; ?><?php if(isset($_GET['city'])) echo '&city='.$_GET['city']; ?>">Wszystkie (<?php echo count_category(1, $city, $nazwa) ?>)</a></li><?php
+	?><li <?php if(isset($_GET['get_category_one'])) {  if(1 == $_GET['get_category_one']) {   echo 'class="active"';    }  } ?>><a href="search.php?category=1<?php if(isset($_GET['nazwa'])) echo '&nazwa='.$_GET['nazwa']; ?><?php if(isset($_GET['city'])) echo '&city='.$_GET['city']; ?>">Wszystkie (<?php echo count_category(1, $city, $nazwa) ?>)</a></li><?php
 	
 	
 	
