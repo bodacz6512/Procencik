@@ -10,7 +10,7 @@ if(isset($_GET['nazwa'])){
 	$nazwa = $_GET['nazwa'];
 }
 
-$show_per_page = 12;
+$show_per_page = 20;
 
 if(!isset($_GET['page'])){
 	$page = 1;
@@ -106,6 +106,7 @@ if(!empty($result)){
 <html lang="pl">
 <head>
 	<?php require_once("components/header.php") ?>
+	<title>Wyszukiwanie organizacji</title>
 	<style>
 	
 	.search-title{
@@ -123,7 +124,7 @@ if(!empty($result)){
 
 	<?php require("components/nav.php") ?>
 	
-	<div class="heart-container"><div class="lds-heart"><div></div></div><p>Daj nam chwilkę... </p></div>
+	<div class="heart-container"><div class="lds-heart"><div></div></div></div>
 	
 	<div class="content" style="display:none;">
 	
@@ -163,7 +164,7 @@ if(!empty($result)){
 				
 				
 					
-						echo $content =  file_get_contents("http://serwer1869889.home.pl/projekt/api/search_api.php?get_category_one&nazwa=$nazwa&city=$city");
+						echo $content =  file_get_contents("http://serwer1869889.home.pl/projekt/api/search_api.php?get_category_one=$cat&nazwa=$nazwa&city=$city");
 				
 					if(!empty($_GET['city'])){
 						echo $content =  file_get_contents("http://serwer1869889.home.pl/projekt/api/search_api.php?get_category=$cat&city=$city");
@@ -285,6 +286,49 @@ if(!empty($result)){
 					}*/
 					?>
 					</div>
+					
+					<div class="arrows-pagination">
+					<?php if($offset != 0){ ?>
+						<a href="?page=<?php echo $page-1;
+
+							if(isset($_GET['category'])){
+								echo "&category=".$_GET['category'];
+							}
+							
+							if(isset($_GET['nazwa'])){
+								echo "&nazwa=".$_GET['nazwa'];
+							}
+							
+							if(isset($_GET['city'])){
+								echo "&city=".$_GET['city'];
+							}
+
+
+							?>"><div class="arrow-paginate"><i class="fas fa-arrow-circle-left"></i>Poprzednia strona
+						</div></a>
+						<?php } ?>
+						<?php if(isset($last_page)){ if($last_page ==1){ ?>
+						<a href="?page=<?php echo $page+1;
+
+							if(isset($_GET['category'])){
+								echo "&category=".$_GET['category'];
+							}
+							
+							if(isset($_GET['nazwa'])){
+								echo "&nazwa=".$_GET['nazwa'];
+							}
+							
+							if(isset($_GET['city'])){
+								echo "&city=".$_GET['city'];
+							}
+
+
+							?>"><div class="arrow-paginate">
+							<i class="fas fa-arrow-circle-right"></i>Następna strona
+						</div></a>
+					
+						<?php } } ?>
+						</div>
 				</div>
 			
 			</div>

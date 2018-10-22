@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 	<?php require_once("components/header.php") ?>
-
+	<title>Nasze API</title>
 </head>
 <body>
 
@@ -18,12 +18,12 @@
 		
 		<div class="api"><h3>Pobieranie informacji o organizacji</h3>
 		
-		<code>http://serwer1869889.home.pl/projekt/api/get_item_api.php?id={id}</code>
+		<code style="display:block;width:450px;max-width:90%;margin:auto;word-break: break-all;">http://serwer1869889.home.pl/projekt/api/get_item_api.php?id={id}</code>
 		<p>Gdzie {id} to id danej organizacji. Znajdziecie je w linku poszczególnej organizacji.</p></div>
 		
 		<div class="api"><h3>Pobieranie opinii o organizacji</h3>
 		
-		<code>http://serwer1869889.home.pl/projekt/api/opinie_api.php?get&id={id} </code>
+		<code style="display:block;width:450px;max-width:90%;margin:auto;word-break: break-all;">http://serwer1869889.home.pl/projekt/api/opinie_api.php?get&id={id} </code>
 		<p>Gdzie {id} to id danej organizacji. Znajdziecie je w linku poszczególnej organizacji.</p></div>
 	
 	

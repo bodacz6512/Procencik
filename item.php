@@ -34,7 +34,7 @@ if(isset($_GET['del_com'])){
 <head>
 	<?php require_once("components/header.php") ?>
 	<link rel="stylesheet" href="css/item.css?<?php echo time() ?>" />
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/fontawesome-stars.css" />
 	<link rel="stylesheet" href="css/fontawesome-stars-o.css" />
 	<title><?php echo ucfirst(strtolower($result->nazwa)) ?> | Procencik</title>
@@ -136,6 +136,22 @@ if(isset($_GET['del_com'])){
 				<div class="block-item-header"><h3 class="title_oceny">Lokalizacja</h3></div>
 				<div class="block-item-content">
 					<div class="mapouter"><div class="gmap_canvas"><iframe  id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo $map; ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+				</div>
+			</div>
+			
+			<div class="block-item">
+				<div class="block-item-header"><h3 class="title_oceny">Widget na stronę WWW</h3></div>
+				<div class="block-item-content">
+				
+					<div class="widget-procencik" item-id="<?php echo $_GET['id'] ?>" style="width:100%;"></div>
+					<script src="https://serwer1869889.home.pl/projekt/widgets/widget.js"></script>
+					
+						<div class="code-header">Kod www na stronę</div>
+						<code>
+							&lt;div class="widget-procencik" item-id="<?php echo $_GET['id'] ?>">&lt;/div>
+							<br>&lt;script src="https://serwer1869889.home.pl/projekt/widgets/widget.js">&lt;/script>
+						</code>
+							
 				</div>
 			</div>
 			

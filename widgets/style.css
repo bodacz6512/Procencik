@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Pacifico');
+.widget-procencik{
+	width:350px;
+	min-height:100px;
+	color:white;
+	background: #DA4453;
+	background: -webkit-linear-gradient(to right, #89216B, #DA4453);
+	background: linear-gradient(to right, #89216B, #DA4453);
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.widget-procencik a{
+	color:white;
+	text-decoration:none;
+}
+
+
+.widget-procencik .brand-logo-widget-procencik{
+	position:absolute;
+	right:5px;
+	font-size:25px;
+	bottom:5px;
+	color: white;
+	font-family: 'Pacifico', cursive;
+}
+
+.widget-procencik .title-widget-procencik{
+	font-size:15px;
+	font-weight:300;
+	padding:10px;
+}
+
+.widget-procencik .header-widget-procencik{
+	font-weight:600;
+	padding:10px;
+}
+
+.widget-procencik  .krs-widget-procencik{
+	margin-top:3px;
+	padding:10px;
+}

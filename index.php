@@ -2,32 +2,33 @@
 <html lang="pl">
 <head>
 	<?php require_once("components/header.php") ?>
-
+	<title>Procencik - Znajdź fundację 1% podatku</title>
 </head>
 <body>
 
 
 	<?php require("components/nav.php") ?>
-	
-	<div class="index-main">
-	
-		<div class="index-main-text">
+	<div class="index-main-bg" style="background-image:url('img/slide1.jpg');background-size:cover;background-attachment:fixed;">
+		<div class="index-main">
 		
-			<h2>Twój 1% podatku</h2>
-			<p>Przekazywanie 1% podatku może odmienić życie wielu ludzi, a czasem nawet je uratować.<br></br> Każda osoba, która ma taką możliwość powinna zdecydować, gdzie chce przekazać swój procent.</p>
+			<div class="index-main-text">
 			
-			<form method="get" action="search.php">
-				<label for="city"><span>Wyszukaj fundację w twoim mieście</span></label>
-				<input type="text" id="city" name="city" placeholder="Nazwa miasta">
-				<input type="submit" value="Wyszukaj">
-			</form>
+				<h2>Twój 1% podatku</h2>
+				<p>Przekazywanie 1% podatku może odmienić życie wielu ludzi, a czasem nawet je uratować.<br></br> Każda osoba, która ma taką możliwość powinna zdecydować, gdzie chce przekazać swój procent.</p>
+				
+				<form method="get" action="search.php">
+					<label for="city"><span>Wyszukaj fundację w twoim mieście</span></label>
+					<input type="text" id="city" name="city" placeholder="Nazwa miasta">
+					<input type="submit" value="Wyszukaj">
+				</form>
+			</div>
+			
+			<div class="index-main-img">
+				<img src="img/slide1.jpg" class="img1"/>
+				<img src="img/slide2.jpg" class="img2" style="display:none;"/>
+			</div>
+			
 		</div>
-		
-		<div class="index-main-img">
-			<img src="img/main-img.jpg" class="img1"/>
-			<img src="img/main-img-2.jpg" class="img2" style="display:none;"/>
-		</div>
-		
 	</div>
 	
 	<div class="index-second">
@@ -81,43 +82,36 @@
 	
 	
 	
-	
-	<div class="index-third">
-	
-		<div class="index-third-text">
+	<div class="index-third-bg" style="background-image:url('img/ludzie.jpg');background-size:cover;background-attachment:fixed;">
+		<div class="index-third">
 		
-		<?php
+			<div class="index-third-text">
 			
-			$content = file_get_contents("http://serwer1869889.home.pl/projekt/api/money_api.php?get_all_money_org=true");
-			$res = json_decode($content);
-			$total = $res->total;
-			$liczba_fundacji = $res->liczba_fundacji;
-		?>
-			<h2>Razem możemy więcej!</h2>
-			<p><br>Razem zebralismy : <span class="odliczanie"><?php echo number_format($total, 2, ',', ' ') ?> </span>złoty.<br>
-			<br><br>Średnio jedna fundacja zyskała <?php echo number_format($total/$liczba_fundacji, 2, ',', ' ')   ?> złoty.</p>
+			<?php
+				
+				$content = file_get_contents("http://serwer1869889.home.pl/projekt/api/money_api.php?get_all_money_org=true");
+				$res = json_decode($content);
+				$total = $res->total;
+				$liczba_fundacji = $res->liczba_fundacji;
+				
+			?>
+				<h2>Razem możemy więcej!</h2>
+				<p><br>Razem zebralismy : <span class="odliczanie"><?php echo number_format($total, 2, ',', ' ') ?> </span>złoty.<br>
+				<br><br>Średnio jedna fundacja zyskała <?php echo number_format($total/$liczba_fundacji, 2, ',', ' ')   ?> złoty.</p>
+				
+			</div>
 			
-			
-			
-			
-			
+			<div class="index-third-img">
+				<img src="img/ludzie.jpg" />
+			</div>
+
 		</div>
-		
-		<div class="index-third-img">
-			<img src="img/ludzie.jpg" />
-		</div>
-	
-	
-	
-	
-	
-	
 	</div>
 
 	
 
 	<?php require_once("components/footer.php") ?>
-	<script src="js/slider.js" /></script>
+	<script src="js/slider.js?dx" /></script>
 	<script>
 	$('input[name="city"]').autoComplete({
     minChars: 1,

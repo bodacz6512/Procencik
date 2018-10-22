@@ -49,7 +49,7 @@ if($page == 1){
 	?>
 		<div class="arrows-list"><?php if($page != 1) { ?> <a href="?page=<?php echo $page-1; ?>"><i class="fas fa-angle-left"></i></a> <?php } ?>
 		<?php if($liczba_fundacji == $per_page) { ?><a href="?page=<?php echo $page+1; ?>"><i class="fas fa-angle-right"></i></a> <?php } ?></div>
-		<table>
+		<table <?php echo 'class="table-'.$page.'"'; ?>>
 			<tr>
 				<th>#</th>
 				<th>Nazwa fundacji</th>
